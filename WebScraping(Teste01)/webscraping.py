@@ -61,7 +61,6 @@ class SiteReferido:
         except Exception as e:
             print(f"❌ Erro ao criar ZIP: {e}")
 # Testes isolados.
-import os
 
 def testar_compactacao():
     # Cria arquivos PDF de exemplo para teste (não arquivos reais, só exemplos de nomes)
