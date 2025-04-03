@@ -1,0 +1,2 @@
+6.256.861 - arquivos na tabela dados.
+1.109 - arquivos na tabela relatorio_cadop 

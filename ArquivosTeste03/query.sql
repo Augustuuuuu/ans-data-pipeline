@@ -14,7 +14,7 @@ FROM
     FROM
         dados
     WHERE
-        descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÃŠNCIA A SAÃšDE MEDICO HOSPITALAR '
+        descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR '
         AND data >= '2024-10-01'
         AND data <= '2024-12-31'
     GROUP BY
@@ -43,7 +43,7 @@ FROM
     FROM
         dados
     WHERE
-        descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÃŠNCIA A SAÃšDE MEDICO HOSPITALAR '
+        descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR '
         AND data >= '2024-01-01'
         AND data < '2024-12-31'
     GROUP BY
@@ -92,43 +92,12 @@ ORDER BY numero_operadoras DESC;
 
 SELECT SUM(vl_saldo_final - vl_saldo_inicial) AS despesa_total
 FROM dados
-WHERE descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÃŠNCIA A SAÃšDE MEDICO HOSPITALAR ';
+WHERE descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR ';
 
 /*Listar as categorias de descrição únicas de despesas:*/
 
 SELECT DISTINCT descricao
-FROM dados
-
-/* Encontrar as 5 categorias de descrição com maior despesa total no último ano:*/
-SELECT
-    descricao,
-    SUM(vl_saldo_final - vl_saldo_inicial) AS total_despesa
-FROM
-    dados
-WHERE
-    data >= '2024-01-01'
-    AND data < '2024-12-31'
-GROUP BY
-    descricao
-ORDER BY
-    total_despesa DESC
-LIMIT 5;
-
--- Encontrar as 5 categorias de descrição com maior despesa total no último ano:
-SELECT
-    descricao,
-    SUM(vl_saldo_final - vl_saldo_inicial) AS total_despesa
-FROM
-    dados
-WHERE
-    data >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR)
-    AND data < CURDATE()
-GROUP BY
-    descricao
-ORDER BY
-    total_despesa DESC
-LIMIT 5;
--- Esta consulta lista as 5 principais descrições de despesas com o maior valor total gasto no último ano.
+FROM dados;
 
 -- Mostrar a tendência mensal de despesas para uma operadora específica no último ano (substitua 'XXXXXX' pelo `reg_ans` desejado):
 SELECT
@@ -137,10 +106,10 @@ SELECT
 FROM
     dados
 WHERE
-    reg_ans = 'XXXXXX'
-    AND descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÃŠNCIA A SAÃšDE MEDICO HOSPITALAR '
-    AND data >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR)
-    AND data < CURDATE()
+    reg_ans = '415774'
+    AND descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR '
+    AND data >= '2024-01-01'
+    AND data < '2024-12-31'
 GROUP BY
     ano_mes
 ORDER BY
@@ -174,7 +143,7 @@ FROM
     FROM
         dados
     WHERE
-        descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÃŠNCIA A SAÃšDE MEDICO HOSPITALAR '
+        descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR '
         AND data >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR)
         AND data < CURDATE()
     GROUP BY
@@ -194,7 +163,7 @@ FROM
 JOIN
     relatorio_cadop rc ON d.reg_ans = rc.registro_ANS
 WHERE
-    d.descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÃŠNCIA A SAÃšDE MEDICO HOSPITALAR '
+    d.descricao = 'EVENTOS/ SINISTROS CONHECIDOS OU AVISADOS  DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR '
     AND d.data >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR)
     AND d.data < CURDATE()
 GROUP BY

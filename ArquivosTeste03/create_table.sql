@@ -31,6 +31,7 @@ CREATE TABLE relatorio_cadop (
     data_registro_ANS VARCHAR(255),
     PRIMARY KEY (registro_ANS)
 );
+ALTER TABLE relatorio_cadop CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE dados (
     data DATE,
@@ -41,3 +42,4 @@ CREATE TABLE dados (
     vl_saldo_final DOUBLE,
     PRIMARY KEY (data, reg_ans, cd_conta_contabil)
 );
+ALTER TABLE dados CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
