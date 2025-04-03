@@ -16,12 +16,8 @@ def csv_para_insert(caminho_csv, tabela):
 caminho_pasta = r"C:\\Users\\augus\\OneDrive\\Documents\\GitHub\\Intuitive_Care_Test\\ArquivosTeste03"
 
 arquivos_tabelas = {
-    #"Relatorio_cadop.csv": "relatorio_cadop",
-    "1T2023.csv": "dados",
-    #"2t2023.csv": "dados",
-    #"3T2023.csv": "dados",
-    #"4T2023.csv": "dados"
-}#
+    "Relatorio_cadop.csv": "relatorio_cadop",
+}
 print("iniciando")
 for arquivo, tabela in arquivos_tabelas.items():
     caminho_completo = os.path.join(caminho_pasta, arquivo)
