@@ -282,6 +282,18 @@ npm run serve ou npm run dev
 # http://localhost:5173/
 ```
 
+#### Interface Vue.js
+
+##### Tela de Busca
+<img src="images_readme\interface_de_pesquisa_buscar.png" alt="Tela de Busca" width="800" height="450" />
+
+*Interface inicial para busca de operadoras*
+
+##### Tela de Resultados
+<img src="images_readme\interface_de_pesquisa_resultado.png" alt="Tela de Resultados" width="800" height="450" />
+
+*Resultados da busca com detalhes das operadoras*
+
 #### Testando a API com Postman
 
 1. **Importar a Coleção**
