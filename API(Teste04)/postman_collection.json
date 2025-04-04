@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "12345678-1234-1234-1234-123456789012",
+		"name": "API Busca Operadoras",
+		"description": "API para busca de operadoras de saúde",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Busca de Operadoras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/search?q=exemplo&field=all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "exemplo",
+							"description": "Termo de busca"
+						},
+						{
+							"key": "field",
+							"value": "all",
+							"description": "Campo para busca (all, Razao_Social, CNPJ, etc)"
+						}
+					]
+				},
+				"description": "Busca de operadoras de saúde por termo e campo específico"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "busca",
+			"value": "exemplo",
+			"type": "string"
+		},
+		{
+			"key": "campo",
+			"value": "all",
+			"type": "string"
+		}
+	]
+} 
