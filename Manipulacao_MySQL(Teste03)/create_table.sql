@@ -1,11 +1,11 @@
 -- Remover o banco de dados se já existir
-DROP DATABASE IF EXISTS IntuitiveCare;
+DROP DATABASE IF EXISTS EmpresaConfidencial;
 
 -- Criar o banco de dados
-CREATE DATABASE IntuitiveCare;
+CREATE DATABASE EmpresaConfidencial;
 
 -- Usar o banco de dados criado
-USE IntuitiveCare;
+USE EmpresaConfidencial;
 
 -- 1. Criar tabelas para armazenar os dados dos arquivos CSV
 CREATE TABLE relatorio_cadop (

@@ -1,4 +1,4 @@
-# Intuitive Care Test
+# Pipeline de Dados ANS — Web Scraping, ETL, MySQL e FastAPI
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
@@ -12,29 +12,14 @@
 
 ## 📋 Descrição
 
-Este projeto foi desenvolvido como parte de um teste técnico para a Intuitive Care, contendo quatro módulos principais que demonstram diferentes habilidades em desenvolvimento de software:
+Este projeto foi desenvolvido como solução para um desafio técnico de um processo seletivo. A empresa solicitou que o nome não fosse divulgado, portanto o repositório é apresentado de forma anônima.
 
-1. **Web Scraping** (Python)
-   - Bibliotecas: `requests`, `beautifulsoup4`, `zipfile`
-   - Coleta e processamento de dados da ANS (Agência Nacional de Saúde Suplementar)
-   - Download automático de documentos PDFs e compactação em ZIP
+O projeto cobre um pipeline completo de dados em 4 módulos independentes:
 
-2. **Transformação de Dados** (Python)
-   - Bibliotecas: `PyPDF2`, `pandas`, `zipfile`
-   - Extração e processamento de dados de PDFs
-   - Conversão para CSV com tratamento de dados
-
-3. **Banco de Dados** (MySQL 8.0)
-   - Linguagem: `SQL`
-   - Ferramentas: `MySQL 8.0`
-   - Manipulação e análise de dados das operadoras de saúde
-   - Queries analíticas para relatórios 
-
-4. **API** (Python + Vue.js)
-   - Backend: `Python` com `FastAPI`
-   - Frontend: `Vue.js 3` com `Vite`
-   - Interface web para busca de operadoras de saúde
-   - `API RESTful` com endpoints documentados
+1. **Web Scraping** — coleta automatizada de documentos PDF da ANS
+2. **Transformação de Dados** — extração e conversão de PDFs para CSV com Pandas
+3. **Banco de Dados** — importação e análise de +6 milhões de registros em MySQL
+4. **API** — interface RESTful com FastAPI e frontend em Vue.js 3
 
 ## 📸 Screenshots
 
@@ -298,7 +283,7 @@ npm run serve ou npm run dev
 
 1. **Importar a Coleção**
    - Abra o Postman
-   - Clique em "Import" e selecione o arquivo `IntuitiveCare_API.postman_collection.json` da pasta `API(Teste04)`
+   - Clique em "Import" e selecione o arquivo `postman_collection.json` da pasta `API(Teste04)`
 
 2. **Configurar o Ambiente**
    - Crie um novo ambiente no Postman
@@ -374,19 +359,6 @@ npm run serve ou npm run dev
 - **Pull Requests**: Processo de revisão estruturado
 - **Versionamento**: Controle de versões do projeto
 
-## 🤝 Como Contribuir
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-### Padrões de Código
-- Siga o PEP 8 para Python
-- Use nomes descritivos para variáveis e funções
-- Documente funções e classes
-- Inclua testes para novas funcionalidades
 
 ## 📄 Licença
 
@@ -394,8 +366,7 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICE
 
 ## 👥 Créditos
 
-- Desenvolvido como parte do processo seletivo da Intuitive Care
-- Baseado nos requisitos técnicos fornecidos pela empresa
+Desenvolvido por Augusto Saboia como solução para desafio técnico de processo seletivo. Os dados utilizados são públicos e disponibilizados pela ANS (Agência Nacional de Saúde Suplementar).
 
 ## 📝 Notas Adicionais
 

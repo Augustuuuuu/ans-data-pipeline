@@ -13,7 +13,7 @@ def csv_para_insert(caminho_csv, tabela):
     insert_sql = f"INSERT INTO {tabela} ({colunas}) VALUES \n" + ",\n".join(valores_lista) + ";"
     return insert_sql
 
-caminho_pasta = r"C:\\Users\\augus\\OneDrive\\Documents\\GitHub\\Intuitive_Care_Test\\ArquivosTeste03"
+caminho_pasta = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'ArquivosTeste03')
 
 arquivos_tabelas = {
     "Relatorio_cadop.csv": "relatorio_cadop",
