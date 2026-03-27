@@ -1,4 +1,4 @@
-# Pipeline de Dados ANS — Web Scraping, ETL, MySQL e FastAPI
+# Pipeline de Dados ANS — Web Scraping, ETL, MySQL e Flask
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
@@ -7,7 +7,7 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![Pandas](https://img.shields.io/badge/Pandas-2C2D72?style=flat&logo=pandas&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
+![Flask](https://img.shields.io/badge/Flask-005571?style=flat&logo=Flask)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ## 📋 Descrição
@@ -19,7 +19,7 @@ O projeto cobre um pipeline completo de dados em 4 módulos independentes:
 1. **Web Scraping** — coleta automatizada de documentos PDF da ANS
 2. **Transformação de Dados** — extração e conversão de PDFs para CSV com Pandas
 3. **Banco de Dados** — importação e análise de +6 milhões de registros em MySQL
-4. **API** — interface RESTful com FastAPI e frontend em Vue.js 3
+4. **API** — interface RESTful com Flask e frontend em Vue.js 3
 
 ## 📸 Screenshots
 
